@@ -1,9 +1,9 @@
 import axios, { AxiosPromise } from 'axios';
+import { isConstructorDeclaration } from 'typescript';
 
 interface HasId {
   id?: number;
 }
-
 export class ApiSync<T extends HasId> {
   constructor(public rootUrl: string) { }
 
